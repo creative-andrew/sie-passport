@@ -8,9 +8,6 @@ app.use(bodyparser.urlencoded({extended:true}));
 mongoose.connect('mongodb://sanisidroemprendedor:wJBT4cwe7Yii6IVj749rEkrWhW5YZ39EI3I2SlRlE13IiupDUGnQCLvkMD4EYe3J7N4YV2DoZaC8fmpywr2kAQ==@sanisidroemprendedor.documents.azure.com:10250/?ssl=true');//nombre de BD
 
 
-
-
-
 var emprendimientoSchema= new mongoose.Schema({
 	nombre:String,
 	slogan:String,
@@ -52,19 +49,48 @@ app.get('/',function(req,res){
 	})
 });
 
+app.get('/index',function(req,res){
+	var emprendimientos=[
+		{
+			categoria:"compra y venta",
+			empresas:[
+				{nombre:"a"},
+				{nombre:"b"},
+				{nombre:"c"},
+				{nombre:"d"},
+				{nombre:"e"}
+			]		
+		},
+		{
+			categoria:"invierte",
+			empresas:[
+				{nombre:"f"},
+				{nombre:"g"},
+				{nombre:"h"},
+				{nombre:"i"},
+				{nombre:"j"}
+			]
+		}
+	]			
+
+	res.render("index",{emprendimientos:emprendimientos})
+})
+
 app.post('/',function(req,res){
 	
-	console.log('Desde post');
+	var categoria = req.body.categoria;
 	var nombre=req.body.nombre;
 	var logo=req.body.logo;
-	var emprendimiento={nombre:nombre,logo:logo};
-	console.log(emprendimiento);
+	var emprendimiento={nombre:nombre,logo:logo, categorias_asociadas: categoria };
+
+
+	console.log(req.body.categoria);
 	Emprendimiento.create(emprendimiento, function (err, emprendimientos) {
 		if (err) {
 			console.log(err)
 		}
 		else {	
-			console.log('desde creado');				
+			console.log(emprendimientos);				
 		}
 	})
 
@@ -80,6 +106,7 @@ app.get('/new',function(req,res){
 	
 });
 
+app.post
 
 app.listen(3000,function(){
 	console.log('Server corriendo.');

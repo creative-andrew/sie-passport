@@ -1,0 +1,8 @@
+<h1>Desde Index</h1>
+
+<% for(var i=0;i<emprendimientos.length;i++){ %>
+	<h1><%= emprendimientos[i].categoria %></h1>
+	<% for(var j=0;j<emprendimientos[i].empresas.length;j++){%>
+			<h2><%= emprendimientos[i].empresas[j].nombre %></h2>
+	<% } %>
+<% } %>
