@@ -1,0 +1,38 @@
+
+*{
+    font-family: 'Varela Round', sans-serif;;
+}
+
+.logotipe{
+     width: 200px;
+     position: absolute;
+     top: 25%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+ }
+
+.scrolldown{
+    width: 50px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .2s ease;
+}
+.element {
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 2px 2px 5px #000;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+.scrolldown:hover{
+    width: 55px;
+}
+#primero{
+    height: 900px;
+}
