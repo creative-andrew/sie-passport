@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SIE - San Isidro Emprende</title>
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/masterslider.css">
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/masterslider.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
@@ -17,36 +17,69 @@
 
 <div class="master-slider ms-skin-default" id="masterslider">
     <div class="element"></div>
-    <img class="logotipe" src="/static/img/sie_white.svg" alt="">
+    <img class="logotipe" src="/img/sie_white.svg" alt="">
     <a href="#primero">
-        <img class="scrolldown" src="/static/img/scrolldown.svg" alt="">
+        <img class="scrolldown" src="/img/scrolldown.svg" alt="">
     </a>
     <!-- new slide -->
     <div class="ms-slide" data-delay="10">
-        <img src="/static/img/back1.png" data-src="/static/img/back5.jpg" alt="lorem ipsum dolor sit"/>
+        <img src="/img/back1.png" data-src="/img/back5.jpg" alt="lorem ipsum dolor sit"/>
     </div>
     <div class="ms-slide" data-delay="10">
-        <img src="/static/img/back1.png" data-src="/static/img/back5.jpg" alt="lorem ipsum dolor sit"/>
+        <img src="/img/back1.png" data-src="/img/back5.jpg" alt="lorem ipsum dolor sit"/>
     </div>
     <div class="ms-slide" data-delay="10">
-        <img src="/static/img/back1.png" data-src="/static/img/back5.jpg" alt="lorem ipsum dolor sit"/>
+        <img src="/img/back1.png" data-src="/img/back5.jpg" alt="lorem ipsum dolor sit"/>
     </div>
     <div class="ms-slide" data-delay="10">
-        <img src="/static/img/back1.png" data-src="/static/img/back5.jpg" alt="lorem ipsum dolor sit"/>
+        <img src="/img/back1.png" data-src="/img/back5.jpg" alt="lorem ipsum dolor sit"/>
     </div>
 </div>
 
-<div id="primero">
-   ESTOY AQUI
+<div>
+
+Compra y Venta
+
+<h2> <%= compraventa[0].nombre%></h2>
+<img src="<%= compraventa[0].logo%>"/>
+
 </div>
 
 
 
-    <script src="/static/js/jquery-1.11.0.min.js" type="text/javascript"></script>
-    <script src="/static/js/masterslider.min.js" type="text/javascript"></script>
-    <script src="/static/js/bootstrap.js"  type="text/javascript"></script>
-    <script src="/static/js/typed.js"  type="text/javascript"></script>
-    <script src="/static/js/jquery.smoothscroll.min.js"  type="text/javascript"></script>
+
+<div>
+
+Invierte
+
+<h2> <%= invierte[0].nombre%></h2>
+<img src="<%= invierte[0].logo%>"/>
+
+<h2> <%= invierte[1].nombre%></h2>
+<img src="<%= invierte[1].logo%>"/>
+
+</div>
+
+<div>
+
+Asociate
+
+<h2> <%= asociate[0].nombre%></h2>
+<img src="<%= asociate[0].logo%>"/>
+
+<h2> <%= asociate[1].nombre%></h2>
+<img src="<%= asociate[1].logo%>"/>
+
+</div>
+
+
+
+
+    <script src="/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="/js/masterslider.min.js" type="text/javascript"></script>
+    <script src="/js/bootstrap.js"  type="text/javascript"></script>
+    <script src="/js/typed.js"  type="text/javascript"></script>
+    <script src="/js/jquery.smoothscroll.min.js"  type="text/javascript"></script>
     <script>
 
         $(function(){

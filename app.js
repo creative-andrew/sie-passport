@@ -3,6 +3,9 @@ bodyparser=require('body-parser'),
 mongoose=require('mongoose'),
 app=express();
 
+
+app.set('view engine','ejs');
+app.use(express.static('public'));
 app.use(bodyparser.urlencoded({extended:true}));
 
 mongoose.connect('mongodb://sanisidroemprendedor:wJBT4cwe7Yii6IVj749rEkrWhW5YZ39EI3I2SlRlE13IiupDUGnQCLvkMD4EYe3J7N4YV2DoZaC8fmpywr2kAQ==@sanisidroemprendedor.documents.azure.com:10250/?ssl=true');//nombre de BD
@@ -35,18 +38,57 @@ Emprendimiento.create({
 });
 */
 
-app.set('view engine','ejs');
 
 app.get('/',function(req,res){
-
-	Emprendimiento.find({}, function (err, emprendimientos) {
+/*
+	var compraventa=[];
+	var invierte=[];
+	var asociate=[];
+*/
+	Emprendimiento.find({categorias_asociadas:{$all:["CompraVenta"]}}, function (err, compraventa) {
 		if (err) {
 			console.log(err)
 		}
-		else {			
-		res.render('landing', {emprendimientos: emprendimientos})
+		else {	
+			Emprendimiento.find({categorias_asociadas:{$all:["Invierte"]}}, function (err, invierte) {
+				if (err) {
+					console.log(err)
+				}
+				else {	
+
+					Emprendimiento.find({categorias_asociadas:{$all:["Asociate"]}}, function (err, asociate) {
+
+						if(err){
+							console.log(err)
+						}else{
+							res.render('landing', {compraventa: compraventa,invierte:invierte,asociate:asociate});	
+						}
+					})
+					
+				}
+			});
+
+		
 		}
-	})
+		
+	});
+
+	
+
+/*
+	Emprendimiento.find({categorias_asociadas:{$all:["CompraVenta"]}}, function (err, emprendimientos) {
+		if (err) {
+			console.log(err)
+		}
+		else {	
+			asociate=emprendimientos;		
+		}
+	});
+
+	console.log(asociate);
+*/
+
+
 });
 
 app.get('/index',function(req,res){
