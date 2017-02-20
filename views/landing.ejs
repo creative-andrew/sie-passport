@@ -9,16 +9,21 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/masterslider.css">
+    <link rel="stylesheet" href="/css/ms-staff-style.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
+<a href="#0" class="cd-top">Top</a>
+
+
 
 <div class="master-slider ms-skin-default" id="masterslider">
     <div class="element"></div>
-    <img class="logotipe" src="/img/sie_white.svg" alt="">
-    <a href="#primero">
+    <img class="logotipe" src="/img/logotipo_rgb.svg" alt="">
+    <a href="#first">
         <img class="scrolldown" src="/img/scrolldown.svg" alt="">
     </a>
     <!-- new slide -->
@@ -36,82 +41,277 @@
     </div>
 </div>
 
-<div>
 
-Compra y Venta
+<div class="container">
 
-<h2> <%= compraventa[0].nombre%></h2>
-<img src="<%= compraventa[0].logo%>"/>
+
+    <div class="primer-paso" id="first">
+        <div class="col-md-6 primero-a">
+            <h1>¿Qué</h1>
+            <h2>es?</h2>
+            <img src="/img/primero.jpg" alt="">
+        </div>
+        <div class="col-md-6 primero-b">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid beatae dignissimos dolorem,
+                excepturi harum iste magnam, maiores modi nihil porro provident quam sit sunt suscipit temporibus vero
+                vitae voluptatibus?</p>
+        </div>
+    </div>
+
+    <div class="segundo-paso">
+        <div class="col-md-8 segundo-a">
+            <h1>Mi Starup</h1>
+            <h2>No es muy conocida</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias architecto cum deserunt dicta,
+                doloremque earum harum labore maxime obcaecati odit officiis omnis porro, praesentium quia quisquam
+                saepe, sed veniam.</p>
+        </div>
+        <div class="col-md-4 segundo-b">
+            <img src="/img/segundo.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="tercer-paso">
+        <div class="col-md-4 tercero-a">
+            <img src="/img/tercero.jpg" alt="">
+        </div>
+        <div class="col-md-8 tercero-b">
+            <h1>¿Entonces</h1>
+            <h2>también puedo unirme a una Starpup?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae, dolore dolorem hic illum nostrum
+                quisquam! A architecto asperiores atque beatae debitis iure modi, officia placeat quaerat reiciendis
+                sunt voluptatem!</p>
+        </div>
+    </div>
+
 
 </div>
 
 
+<div class="container-fluid color-div">
+    <div class="container" style="padding: 20px">
+        <div class="col-md-4" style="text-align: center">
+            <div class="back1">
+                <img src="/img/compra.png" alt="">
+            </div>
+            <img width="100px" src="/img/compra.png" alt="">
+            <h1 class="title-categories">Compra y Venta</h1>
+            <p class="text-categories">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illum ipsum magni quis, suscipit voluptatum.
+                Ab at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
+                voluptatum? at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
+                voluptatum?</p>
+            <a class="ver-button" href="javascript:void(0)">Ver más</a>
+        </div>
+        <div class="col-md-8">
+            <div class="ms-staff-carousel ms-round">
+                <div class="master-slider2 " id="masterslider2">
+                    <% compraventa.forEach(function(compra) { %>
+                    <div class="ms-slide">
+                        <a href="javascript:void(0)">
+                            <img src="/img/blank.gif" data-src="<%= compra.logo %>" alt="<%= compra.nombre %>"/>
+                        </a>
+                        <img src="/img/blank.gif" data-src="<%= compra.logo %>" alt="<%= compra.nombre %>"/>
 
 
-<div>
+                        <div class="ms-info">
+                            <a href="javascript:void(0)"><h3><%= compra.nombre %></h3></a>
+                        </div>
+                    </div>
+                    <% }); %>
+                </div>
+                <!-- end of masterslider -->
+                <div class="ms-staff-info" id="staff-info2"></div>
 
-Invierte
+            </div>
+        </div>
+        
 
-<h2> <%= invierte[0].nombre%></h2>
-<img src="<%= invierte[0].logo%>"/>
+    </div>
+</div>
 
-<h2> <%= invierte[1].nombre%></h2>
-<img src="<%= invierte[1].logo%>"/>
+
+<div class="container"  style="padding: 20px">
+    <div class="col-md-8">
+        <div class="ms-staff-carousel ms-round">
+            <div class="master-slider3" id="masterslider3">
+                <% invierte.forEach(function(inv) { %>
+                <div class="ms-slide">
+                    <a href="javascript:void(0)">
+                        <img src="/img/blank.gif" data-src="<%= inv.logo %>" alt="<%= inv.nombre %>"/>
+                    </a>
+                    <img src="/img/blank.gif" data-src="<%= inv.logo %>" alt="<%= inv.nombre %>"/>
+
+
+                    <div class="ms-info">
+                        <a href="javascript:void(0)"><h3><%= inv.nombre %></h3></a>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+            <!-- end of masterslider -->
+            <div class="ms-staff-info" id="staff-info3"></div>
+
+        </div>
+    </div>
+    <div class="col-md-4" style="text-align: center">
+        <div class="back2">
+            <img src="/img/invierte.png" alt="">
+        </div>
+        <img width="100px" src="/img/invierte.png" alt="">
+        <h1 class="title-categories">Invierte</h1>
+        <p class="text-categories">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illum ipsum magni quis, suscipit voluptatum.
+            Ab at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
+            voluptatum? at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
+            voluptatum?</p>
+        <a class="ver-button" href="javascript:void(0)">Ver más</a>
+    </div>
+
+
+
 
 </div>
 
-<div>
 
-Asociate
+<div class="container-fluid color-div">
+    <div class="container"  style="padding: 20px">
+        <div class="col-md-4" style="text-align: center">
+            <div class="back3">
+                <img src="/img/asociate.png" alt="">
+            </div>
+            <img width="100px" src="/img/asociate.png" alt="">
+            <h1 class="title-categories">Asociate</h1>
+            <p class="text-categories">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illum ipsum magni quis, suscipit voluptatum.
+                Ab at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
+                voluptatum? at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
+                voluptatum?</p>
+            <a class="ver-button" href="javascript:void(0)">Ver más</a>
+        </div>
+        <div class="col-md-8">
+            <div class="ms-staff-carousel ms-round">
+                <div class="master-slider4" id="masterslider4">
+                    <% asociate.forEach(function(asoc) { %>
+                    <div class="ms-slide">
+                        <a href="javascript:void(0)">
+                            <img src="/img/blank.gif" data-src="<%= asoc.logo %>" alt="<%= asoc.nombre %>"/>
+                        </a>
+                        <img src="/img/blank.gif" data-src="<%= asoc.logo %>" alt="<%= asoc.nombre %>"/>
 
-<h2> <%= asociate[0].nombre%></h2>
-<img src="<%= asociate[0].logo%>"/>
 
-<h2> <%= asociate[1].nombre%></h2>
-<img src="<%= asociate[1].logo%>"/>
+                        <div class="ms-info">
+                            <a href="javascript:void(0)"><h3><%= asoc.nombre %></h3></a>
+                        </div>
+                    </div>
+                    <% }); %>
+                </div>
+                <!-- end of masterslider -->
+                <div class="ms-staff-info" id="staff-info4"></div>
 
+            </div>
+        </div>
+    </div>
 </div>
 
 
+<div class="container-fluid footer-back">
+    <div class="container">
+        <footer>
+            <img src="/img/logotipo_rgb.png" alt="">
+            <p>Todos los derechos reservados &copy; | Powered by <a href="javascript:void(0)">SIE</a></p>
+        </footer>
+    </div>
+</div>
 
 
-    <script src="/js/jquery-1.11.0.min.js" type="text/javascript"></script>
-    <script src="/js/masterslider.min.js" type="text/javascript"></script>
-    <script src="/js/bootstrap.js"  type="text/javascript"></script>
-    <script src="/js/typed.js"  type="text/javascript"></script>
-    <script src="/js/jquery.smoothscroll.min.js"  type="text/javascript"></script>
-    <script>
+<script src="/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="/js/masterslider.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.js" type="text/javascript"></script>
+<script src="/js/typed.js" type="text/javascript"></script>
+<script src="/js/jquery.smoothscroll.min.js" type="text/javascript"></script>
+<script src="/js/backtop.js" type="text/javascript"></script>
+<script>
 
-        $(function(){
-            $(".element").typed({
-                strings: ["El Fracaso mas grande es nunca haberlo intentado", "El Fracaso mas grande es nunca haberlo intentado"],
-                typeSpeed: 10
-            });
+    $(function () {
+        $(".element").typed({
+            strings: ["El Fracaso mas grande es nunca haberlo intentado", "El Fracaso mas grande es nunca haberlo intentado"],
+            typeSpeed: 10
         });
+    });
 
 
-        var slider = new MasterSlider();
+    var slider = new MasterSlider();
 
-        slider.control('arrows' ,{insertTo:'#masterslider'});
-        slider.control('bullets');
+    slider.control('arrows', {insertTo: '#masterslider'});
+    slider.control('bullets');
 
-        slider.setup('masterslider' , {
-            width:1024,
-            height:500,
-            space:5,
-            grabCursor:false,
-            view:'basic',
-            loop:true,
-            autoplay:true,
-            layout:'fullscreen',
-            speed:20
-        });
+    slider.setup('masterslider', {
+        width: 1024,
+        height: 500,
+        space: 5,
+        grabCursor: false,
+        view: 'basic',
+        loop: true,
+        autoplay: true,
+        layout: 'fullscreen',
+        speed: 20
+    });
 
-        $(function() {
-            $('html').smoothScroll(700);
-        });
+    $(function () {
+        $('html').smoothScroll(700);
+    });
 
-    </script>
+
+    var slider2 = new MasterSlider();
+    slider2.setup('masterslider2', {
+        loop: true,
+        width: 170,
+        height: 170,
+        speed: 20,
+        view: 'focus',
+        preload: 0,
+        grabCursor: false,
+        space: 0,
+        space: 35,
+        viewOptions: {centerSpace: 2}
+    });
+    slider2.control('arrows');
+    slider2.control('slideinfo', {insertTo: '#staff-info2'});
+
+
+    var slider3 = new MasterSlider();
+    slider3.setup('masterslider3', {
+        loop: true,
+        width: 170,
+        height: 170,
+        speed: 20,
+        view: 'focus',
+        preload: 0,
+        grabCursor: false,
+        space: 0,
+        space: 35,
+        viewOptions: {centerSpace: 2}
+    });
+    slider3.control('arrows');
+    slider3.control('slideinfo', {insertTo: '#staff-info3'});
+
+
+    var slider4 = new MasterSlider();
+    slider4.setup('masterslider4', {
+        loop: true,
+        width: 170,
+        height: 170,
+        speed: 20,
+        view: 'focus',
+        preload: 0,
+        grabCursor: false,
+        space: 0,
+        space: 35,
+        viewOptions: {centerSpace: 2}
+    });
+    slider4.control('arrows');
+    slider4.control('slideinfo', {insertTo: '#staff-info4'});
+
+
+</script>
 
 </body>
 

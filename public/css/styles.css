@@ -1,24 +1,36 @@
 
-*{
-    font-family: 'Varela Round', sans-serif;;
+@font-face {
+    font-family: 'OstrichSans Heavy';
+    src: url(../fonts/OstrichSans-Heavy.otf);
 }
 
-.logotipe{
-     width: 200px;
-     position: absolute;
-     top: 25%;
-     left: 50%;
-     transform: translate(-50%,-50%);
- }
+@font-face {
+    font-family: 'OstrichSans Medium';
+    src: url(../fonts/OstrichSans-Medium.otf);
+}
 
-.scrolldown{
+
+body{
+    font-family: 'Varela Round';
+}
+
+.logotipe {
+    width: 350px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scrolldown {
     width: 50px;
     position: absolute;
     bottom: 0%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     transition: all .2s ease;
 }
+
 .element {
     color: #fff;
     font-size: 40px;
@@ -30,9 +42,177 @@
     width: 100%;
     text-align: center;
 }
-.scrolldown:hover{
+
+.scrolldown:hover {
     width: 55px;
 }
-#primero{
-    height: 900px;
+
+/*===================
+ Landing
+ ==================*/
+
+.primer-paso, .segundo-paso, .tercer-paso {
+    padding: 20px 0;
+    height: 400px;
 }
+
+.primer-paso .primero-a, .segundo-paso .segundo-a, .tercer-paso .tercero-b{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.primer-paso .primero-b, .segundo-paso .segundo-b, .tercer-paso .tercero-a{
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.primer-paso .primero-a img, .segundo-paso .segundo-b img, .tercer-paso .tercero-a img{
+    height: 350px;
+}
+
+
+.primer-paso .primero-a h1 {
+    text-transform: uppercase;
+    font-family: 'OstrichSans Heavy';
+    position: absolute;
+    color: #33A2E5;
+    top: 35%;
+    right: 35%;
+    font-size: 80px;
+}
+
+.primer-paso .primero-a h2 {
+    text-transform: uppercase;
+    font-family: 'OstrichSans Heavy';
+    position: absolute;
+    color: #343434;
+    top: 56%;
+    right: 20%;
+    font-size: 120px;
+}
+
+.segundo-paso .segundo-a h1, .tercer-paso .tercero-b h1{
+    text-transform: uppercase;
+    font-family: 'OstrichSans Heavy';
+    color: #33A2E5;
+    line-height: 24px;
+    font-size: 60px;
+    margin: 0 0 5px 0;
+}
+.segundo-paso .segundo-a h2{
+    text-transform: uppercase;
+    font-family: 'OstrichSans Heavy';
+    color: #343434;
+    font-size: 60px;
+    margin: 0 0 5px 100px;
+}
+.tercer-paso .tercero-b h2{
+    text-transform: uppercase;
+    font-family: 'OstrichSans Heavy';
+    color: #343434;
+    font-size: 50px;
+    margin: 10px 0 5px 75px;
+}
+
+
+.segundo-paso .segundo-a, .segundo-paso .segundo-b  {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.color-div{
+    background: #F1F1F1;
+}
+.title-categories{
+    font-family: "OstrichSans Medium";
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 5px;
+}
+.ms-info a h3{
+    font-family: "OstrichSans Medium" !important;
+    font-size: 35px !important;
+    color: #33A2E5;
+    
+}
+
+.ms-info a{
+    text-decoration: none;
+    color: #343434;
+}
+.text-categories{
+    text-align: justify;
+}
+.ver-button{
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 5px;
+    background-color: #343434;
+    color: #fff;
+    font-size: 14px;
+    float: left;
+    border-radius: 5px;
+    transition: all .5s;
+}
+.ver-button:hover{
+    text-decoration: none;
+    background-color: #33A2E5;
+    color: #fff;
+}
+
+.back1{
+    position: absolute;
+    overflow: hidden;
+    height: 378px;
+    top: -20px;
+    opacity: .1;
+    left: -200px;
+    pointer-events: none;
+}
+.back2{
+    position: absolute;
+    overflow: hidden;
+    height: 378px;
+    top: -20px;
+    z-index: -1;
+    opacity: .1;
+    right: -200px;
+    pointer-events: none;
+}
+.back3{
+    position: absolute;
+    overflow: hidden;
+    height: 378px;
+    top: -20px;
+    opacity: .1;
+    left: -200px;
+    pointer-events: none;
+}
+
+/*===================
+ footer
+ ==================*/
+
+.footer-back{
+    background-color: #343434;
+    font-family: "OstrichSans Medium";
+    color: #fff;
+}
+footer{
+    text-align: center;
+    height:auto;
+}
+footer p{
+    letter-spacing: 1px;
+    margin-top: -30px;
+}
+footer img{
+    height: 200px;
+    position: relative;
+    top: -45px;
+    pointer-events: none;
+}
+
