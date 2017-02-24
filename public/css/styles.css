@@ -16,6 +16,7 @@ body{
 
 
 .logotipe {
+    pointer-events: none;
     width: 350px;
     position: absolute;
     top: 35%;
@@ -76,6 +77,16 @@ body{
     margin: 40px auto;
     position: relative;
 }
+#small-dialog2 {
+    background: white;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 400px;
+    margin: 40px auto;
+    position: relative;
+}
+
+
 .my-mfp-zoom-in .zoom-anim-dialog {
     opacity: 0;
 
@@ -191,6 +202,106 @@ body{
 /* animate out */
 .my-mfp-slide-bottom.mfp-removing.mfp-bg {
     opacity: 0;
+}
+
+/*===================
+ Login
+ ==================*/
+#small-dialog,#small-dialog2{
+    border-top:solid 5px #33A2E5;
+    font-family: "OstrichSans Heavy";
+    border-radius: 0 0 10px 10px;
+}
+#small-dialog h1,#small-dialog2 h1{
+    text-align: center;
+    color: #33A2E5;
+}
+#small-dialog form input, #small-dialog2 form input{
+    font-size: 16px;
+    font-family: "OstrichSans Medium";
+    letter-spacing: 1px;
+}
+#small-dialog form label, #small-dialog2 form label{
+    font-size: 20px;
+    font-family: 'OstrichSans Medium';
+    letter-spacing: 1.2px;
+}
+.olv-pass{
+    display: inline-block;
+    font-size: 19px;
+    float: right;
+    font-weight: bold;
+    font-family: "ostrichsans medium";
+}
+.olv-pass a{
+    color: #343434;
+}
+.submit_sie{
+    letter-spacing: 1px;
+    background: #33A2E5;
+    color: #fff;
+    font-size: 20px;
+    font-family: "ostrichsans medium";
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.fb-button-login{
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    background: #5474AB;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.fb-button-login i{
+    padding-left: 20px;
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    font-size: 24px;
+}
+.gg-button-login{
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    background: #FF0000;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.gg-button-login i{
+    padding-left: 20px;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    font-size: 24px;
+}
+.style-eight {
+    padding: 0;
+    border: none;
+    border-top: thin solid rgba(0,0,0,.2);
+    color: rgba(0,0,0,.2);
+    text-align: center;
+}
+hr.style-eight::after {
+    content: "ó";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.2em;
+    padding: 0px 0.25em;
+    background: white;
 }
 
 /*===================
@@ -362,3 +473,71 @@ footer img{
     pointer-events: none;
 }
 
+@media only screen and (min-width : 320px) and (max-width : 736px) {
+    .primer-paso, .segundo-paso, .tercer-paso{
+        height:300px;
+        display: inline-block;
+    }
+    .primer-paso .primero-b, .segundo-paso .segundo-b, .tercer-paso .tercero-a{
+        top:34%;
+    }
+    .primer-paso .primero-a img, .segundo-paso .segundo-b img, .tercer-paso .tercero-a img{
+        height:250px;
+    }
+    .primer-paso .primero-a h1{
+        font-size: 50px;
+    }
+    .primer-paso .primero-a h2{
+        font-size: 70px;
+    }
+    .logotipe{
+        width: 250px;
+        top:25%;
+    }
+
+    .element{
+        bottom:4%;
+        font-size: 27px;
+    }
+    .scrolldown{
+        display: none;
+    }
+    .sesion #one{
+        left: 0;
+        text-shadow: none;
+        width: 50%;
+        top: initial;
+        transform: none;
+        opacity: 1;
+        text-align: center;
+        bottom: -2px;
+        text-rendering: optimizeLegibility;
+        position: fixed;
+        z-index: 2;
+        font-size: 20px;
+        border: solid 1px rgba(0,0,0,.2);
+        background: #33A2E5;
+        color: #fff;
+        padding: 5px;
+        transition: all .5s;
+    }
+    .sesion #two{
+        right: 0;
+        text-shadow: none;
+        width: 50%;
+        top: initial;
+        transform: none;
+        opacity: 1;
+        text-align: center;
+        bottom: -2px;
+        text-rendering: optimizeLegibility;
+        position: fixed;
+        z-index: 2;
+        font-size: 20px;
+        border: solid 1px rgba(0,0,0,.2);
+        background: #33A2E5;
+        color: #fff;
+        padding: 5px;
+        transition: all .5s;
+    }
+}
