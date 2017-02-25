@@ -17,10 +17,10 @@ body{
 
 .logotipe {
     pointer-events: none;
-    width: 350px;
+    width: 115px;
     position: absolute;
-    top: 35%;
-    left: 50%;
+    top: 16%;
+    left: 65px;
     transform: translate(-50%, -50%);
 }
 
@@ -33,22 +33,76 @@ body{
     transition: all .2s ease;
 }
 
-.element {
+.element2 {
     color: #fff;
     font-size: 40px;
-    text-shadow: 2px 2px 5px #000;
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
+    font-family: "OstrichSans Heavy";
+    text-shadow: 2px 2px 5px rgba(0,0,0,.5);
 }
 
 .scrolldown:hover {
     width: 55px;
 }
+/*===================
+Buscador
+ ==================*/
+.buscador-principal{
+    width: 55%;
+    position: absolute;
+    z-index: 3;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 159, 227,.5);
+    padding: 15px;
+    border-radius: 5px;
+}
+.buscador-principal #buscador1 i{
+    pointer-events: none;
+    position: absolute;
+    left: 321px;
+    z-index: 9;
+    background: #009FE3;
+    color: #fff;
+    border-radius: 0 3px 3px 0;
+    width: 40px;
+    line-height: 52px;
+    height: 52px;
+    text-align: center;
 
+}
+.buscador-principal form input{
+    width: 50%;
+    float: right;
+    line-height: 40px;
+    height: 50px;
+    border: none;
+    color: rgba(0,0,0,.7);
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.buscador-principal .bootstrap-select{
+    width: 42% !important;
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+}
+.buscador-principal .bootstrap-select.open{
+    background: #fff;
+}
+.buscador-principal .bootstrap-select button{
+    width: 100%;
+    border: 0;
+    height: 40px;
+    color: rgba(0, 0, 0, .5);
+    -webkit-appearance: none;
+    padding-left: 10px;
+    border-radius: 5px !important;
+}
+.bootstrap-select.btn-group .dropdown-menu li a{
+    padding: 15px;
+}
 /*===================
  Landing
  ==================*/
@@ -56,12 +110,30 @@ body{
     font-family: "OstrichSans Medium";
     position: absolute;
     top: 30px;
-    right: 20%;
+    right: 10%;
     font-size: 20px;
     color: #fff;
     text-shadow: 1px 1px 5px #000;
 }
 .sesion a {
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.menu{
+    font-family: "OstrichSans Medium";
+    position: absolute;
+    top: 30px;
+    left: 30%;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 5px #000;
+}
+.menu a {
     letter-spacing: 1.5px;
     text-decoration: none;
     font-size: 20px;
@@ -386,7 +458,7 @@ hr.style-eight::after {
     font-family: "OstrichSans Medium";
     font-weight: bold;
     font-size: 30px;
-    text-align: center;
+    text-align: left;
     margin-top: 5px;
 }
 .ms-info a h3{
@@ -406,7 +478,6 @@ hr.style-eight::after {
 .ver-button{
     text-decoration: none;
     padding: 5px 15px;
-    margin: 5px;
     background-color: #343434;
     color: #fff;
     font-size: 14px;

@@ -5,10 +5,7 @@
 .ms-staff-carousel {
     max-width: 1170px;
     overflow: hidden;
-    position: relative;
     height: 250px;
-    top: 50%;
-    transform: translateY(25%);
 }
 
 .ms-staff-carousel .ms-view {

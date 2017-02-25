@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/masterslider.css">
     <link rel="stylesheet" href="/css/ms-staff-style.css">
     <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
@@ -24,13 +25,30 @@
 <a href="#0" class="cd-top">Top</a>
 
 
-
 <div class="master-slider ms-skin-default" id="masterslider">
+
     <div class="sesion">
         <span><a id="one" class="popup-with-zoom-anim" href="#small-dialog">Entrar</a></span>
         <span>|</span>
         <span><a id="two" class="popup-with-zoom-anim" href="#small-dialog2">Registrarse</a></span>
     </div>
+    <div class="menu">
+        <span><a id="three" class="popup-with-zoom-anim" href="javascript:void(0)">¿Cómo funciona?</a></span>
+    </div>
+    <div class="buscador-principal">
+        <div id="buscador1">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            <form class="searcher" method="GET" action="" role="search">
+                <select name="slug_seccion"  class="selectpicker">
+                    <option value="Compras">Compras</option>
+                    <option value="Invierte">Invierte</option>
+                    <option value="Asociate">Asociate</option>
+                </select>
+                <input name="search" class="search" type="text" placeholder="Ej: Regalos,Accesorios para Mascotas, Belleza"/>
+            </form>
+        </div>
+    </div>
+
 
     <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
         <h1>Entrar</h1>
@@ -44,17 +62,19 @@
             <i class="fa fa-google-plus" aria-hidden="true"></i>
             Ingresar con <strong>Google +</strong>
         </div>
-
+        <!--
         <hr class="style-eight">
         <form action="">
             <div class="form-group">
                 <label for="username">Usuario</label>
-                <input class="form-control" type="email" id="username" name="_username" required="required"  placeholder="Usuario">
+                <input class="form-control" type="email" id="username" name="_username" required="required"
+                       placeholder="Usuario">
             </div>
 
             <div class="form-group">
                 <label for="password">Contraseña</label>
-                <input class="form-control" type="password" id="password" name="_password" required="required"  placeholder="Contraseña">
+                <input class="form-control" type="password" id="password" name="_password" required="required"
+                       placeholder="Contraseña">
             </div>
 
 
@@ -65,15 +85,15 @@
             </div>
 
             <div style="text-align: center">
-                <button type="submit" class="btn submit_sie" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" >Entrar</button>
+                <button type="submit" class="btn submit_sie" id="_submit" name="_submit"
+                        value="{{ 'security.login.submit'|trans }}">Entrar
+                </button>
             </div>
-
+        -->
         </form>
 
 
-
     </div>
-
 
     <div id="small-dialog2" class="zoom-anim-dialog mfp-hide">
         <h1>Registro</h1>
@@ -81,20 +101,24 @@
 
             <div class="form-group">
                 <label for="username">Email</label>
-                <input class="form-control" type="email" id="email" name="_email" required="required"  placeholder="email">
+                <input class="form-control" type="email" id="email" name="_email" required="required"
+                       placeholder="email">
             </div>
             <div class="form-group">
                 <label for="password">Usuario</label>
-                <input class="form-control" type="text" id="usuario_reg" name="_usuarioreg" required="required"  placeholder="Usuario">
+                <input class="form-control" type="text" id="usuario_reg" name="_usuarioreg" required="required"
+                       placeholder="Usuario">
             </div>
             <div class="form-group">
                 <label for="password">Contraseña</label>
-                <input class="form-control" type="password" id="password1" name="_password" required="required"  placeholder="Contraseña">
+                <input class="form-control" type="password" id="password1" name="_password" required="required"
+                       placeholder="Contraseña">
             </div>
 
             <div class="form-group">
                 <label for="password">Repita Contraseña</label>
-                <input class="form-control" type="password" id="password2" name="_password" required="required"  placeholder="Repita Contraseña">
+                <input class="form-control" type="password" id="password2" name="_password" required="required"
+                       placeholder="Repita Contraseña">
             </div>
 
             <div style="text-align: center">
@@ -104,20 +128,23 @@
         </form>
 
 
-
     </div>
 
 
-
-
-    <div class="element"></div>
     <img class="logotipe" src="/img/logotipo_l_blanco.svg" alt="">
-    <a href="#first">
-        <img class="scrolldown" src="/img/scrolldown.svg" alt="">
-    </a>
     <!-- new slide -->
     <div class="ms-slide" data-fill-mode="fill" data-delay="10">
         <img src="/img/back1.png" data-src="/img/back5.jpg" alt="lorem ipsum dolor sit"/>
+        <div  class="ms-layer ms-caption element2"
+              data-offset-x      = "300"
+              data-offset-y      = "200"
+              data-origin        = "tr"
+              data-type          = "text"
+              data-effect        = "bottom(50)"
+              data-duration      = "800"
+              data-ease          = "easeOutQuart">
+            Lorem ipsum dolor sit amet
+        </div>
         <!--
         <video data-autopause="false" data-mute="false" data-loop="true" data-fill-mode="fill">
             <source id="mp4" src="/video/emprender2.mp4" type="video/mp4"/>
@@ -125,59 +152,43 @@
     </div>
     <div class="ms-slide" data-delay="10">
         <img src="/img/back1.png" data-src="/img/back2.jpg" alt="lorem ipsum dolor sit"/>
+        <div  class="ms-layer ms-caption element2"
+              data-offset-x      = "300"
+              data-offset-y      = "200"
+              data-origin        = "tr"
+              data-type          = "text"
+              data-effect        = "bottom(50)"
+              data-duration      = "800"
+              data-ease          = "easeOutQuart">
+            Lorem ipsum dolor sit amet
+        </div>
     </div>
     <div class="ms-slide" data-delay="10">
         <img src="/img/back1.png" data-src="/img/back3.jpg" alt="lorem ipsum dolor sit"/>
+        <div  class="ms-layer ms-caption element2"
+              data-offset-x      = "300"
+              data-offset-y      = "200"
+              data-origin        = "tr"
+              data-type          = "text"
+              data-effect        = "bottom(50)"
+              data-duration      = "800"
+              data-ease          = "easeOutQuart">
+            Lorem ipsum dolor sit amet
+        </div>
     </div>
     <div class="ms-slide" data-delay="10">
         <img src="/img/back1.png" data-src="/img/back2.jpg" alt="lorem ipsum dolor sit"/>
-    </div>
-</div>
-
-
-<div class="container">
-
-
-    <div class="primer-paso" id="first">
-        <div class="col-md-6 primero-a">
-            <h1>¿Cómo</h1>
-            <h2>Funciona?</h2>
-            <img src="/img/primero.jpg" alt="">
-        </div>
-        <div class="col-md-6 primero-b">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid beatae dignissimos dolorem,
-                excepturi harum iste magnam, maiores modi nihil porro provident quam sit sunt suscipit temporibus vero
-                vitae voluptatibus?</p>
+        <div  class="ms-layer ms-caption element2"
+              data-offset-x      = "300"
+              data-offset-y      = "200"
+              data-origin        = "tr"
+              data-type          = "text"
+              data-effect        = "bottom(50)"
+              data-duration      = "800"
+              data-ease          = "easeOutQuart">
+            Lorem ipsum dolor sit amet
         </div>
     </div>
-
-    <div class="segundo-paso">
-        <div class="col-md-8 segundo-a">
-            <h1>Mi Starup</h1>
-            <h2>No es muy conocida</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias architecto cum deserunt dicta,
-                doloremque earum harum labore maxime obcaecati odit officiis omnis porro, praesentium quia quisquam
-                saepe, sed veniam.</p>
-        </div>
-        <div class="col-md-4 segundo-b">
-            <img src="/img/segundo.jpg" alt="">
-        </div>
-    </div>
-
-    <div class="tercer-paso">
-        <div class="col-md-4 tercero-a">
-            <img src="/img/tercero.jpg" alt="">
-        </div>
-        <div class="col-md-8 tercero-b">
-            <h1>¿Entonces</h1>
-            <h2>también puedo unirme a una Starpup?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae, dolore dolorem hic illum nostrum
-                quisquam! A architecto asperiores atque beatae debitis iure modi, officia placeat quaerat reiciendis
-                sunt voluptatem!</p>
-        </div>
-    </div>
-
-
 </div>
 
 
@@ -189,9 +200,11 @@
             </div>
             <img width="100px" src="/img/compra.png" alt="">
             <h1 class="title-categories">Compra y Venta</h1>
-            <p class="text-categories">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illum ipsum magni quis, suscipit voluptatum.
+            <p class="text-categories">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illum ipsum magni
+                quis, suscipit voluptatum.
                 Ab at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
-                voluptatum? at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
+                voluptatum? at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit
+                totam
                 voluptatum?</p>
             <a class="ver-button" href="/categorias">Ver más</a>
         </div>
@@ -217,14 +230,26 @@
 
             </div>
         </div>
-        
+
 
     </div>
 </div>
 
 
-<div class="container"  style="padding: 20px">
-    <div class="col-md-8">
+<div class="container" style="padding: 20px">
+
+    <div class="col-md-12" style="text-align: left">
+        <!--<img width="100px" src="/img/invierte.png" alt=""-->
+        <h1 class="title-categories">Invierte</h1>
+        <p class="text-categories">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illum ipsum magni
+            quis, suscipit voluptatum.
+            Ab at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
+            voluptatum? at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
+            voluptatum?</p>
+        <a class="ver-button" href="/categorias">Ver más</a>
+    </div>
+
+    <div class="col-md-12">
         <div class="ms-staff-carousel ms-round">
             <div class="master-slider3" id="masterslider3">
                 <% invierte.forEach(function(inv) { %>
@@ -246,19 +271,6 @@
 
         </div>
     </div>
-    <div class="col-md-4" style="text-align: center">
-        <div class="back2">
-            <img src="/img/invierte.png" alt="">
-        </div>
-        <img width="100px" src="/img/invierte.png" alt="">
-        <h1 class="title-categories">Invierte</h1>
-        <p class="text-categories">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illum ipsum magni quis, suscipit voluptatum.
-            Ab at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
-            voluptatum? at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
-            voluptatum?</p>
-        <a class="ver-button" href="/categorias">Ver más</a>
-    </div>
-
 
 
 
@@ -266,16 +278,18 @@
 
 
 <div class="container-fluid color-div">
-    <div class="container"  style="padding: 20px">
+    <div class="container" style="padding: 20px">
         <div class="col-md-4" style="text-align: center">
             <div class="back3">
                 <img src="/img/asociate.png" alt="">
             </div>
             <img width="100px" src="/img/asociate.png" alt="">
             <h1 class="title-categories">Asociate</h1>
-            <p class="text-categories">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illum ipsum magni quis, suscipit voluptatum.
+            <p class="text-categories">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illum ipsum magni
+                quis, suscipit voluptatum.
                 Ab at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
-                voluptatum? at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit totam
+                voluptatum? at consequuntur distinctio eaque in laudantium, non nulla pariatur placeat reiciendis sit
+                totam
                 voluptatum?</p>
             <a class="ver-button" href="/categorias">Ver más</a>
         </div>
@@ -321,6 +335,7 @@
 <script src="/js/typed.js" type="text/javascript"></script>
 <script src="/js/jquery.smoothscroll.min.js" type="text/javascript"></script>
 <script src="/js/backtop.js" type="text/javascript"></script>
+<script src="/js/bootstrap-select.min.js" type="text/javascript"></script>
 <script src="/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
 <script>
     $(function () {
@@ -356,18 +371,18 @@
 
     slider.setup('masterslider', {
         width: 1024,
-        height: 500,
+        height: 450,
         space: 5,
         grabCursor: false,
         view: 'basic',
         loop: true,
         autoplay: true,
-        layout: 'fullscreen',
+        layout: 'fullwidth',
         speed: 20
     });
 
 
-    $('a[href*="#"]:not([href="#"])').click(function() {
+    $('a[href*="#"]:not([href="#"])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
