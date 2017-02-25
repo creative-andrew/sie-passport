@@ -1,12 +1,15 @@
-var express = require('express'),
+var express = require('express');
+var engine = require('ejs-locals');
+
 bodyparser=require('body-parser'),
 mongoose=require('mongoose'),
 app=express();
 
-
+app.engine('ejs', engine);
 app.set('view engine','ejs');
 app.use(express.static('public'));
 app.use(bodyparser.urlencoded({extended:true}));
+
 
 mongoose.connect('mongodb://sanisidroemprendedor:wJBT4cwe7Yii6IVj749rEkrWhW5YZ39EI3I2SlRlE13IiupDUGnQCLvkMD4EYe3J7N4YV2DoZaC8fmpywr2kAQ==@sanisidroemprendedor.documents.azure.com:10250/?ssl=true');//nombre de BD
 
@@ -147,6 +150,13 @@ app.get('/new',function(req,res){
 	res.render('new');
 	
 });
+
+app.get('/categorias',function(req,res){
+
+    res.render('categorias');
+
+});
+
 
 app.post
 
