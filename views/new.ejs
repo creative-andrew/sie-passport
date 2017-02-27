@@ -1,14 +1,16 @@
 <h1>Registro de emprendimiento</h1>
 
-<form method="POST" action="/">
+<form method="POST" action="/" enctype="multipart/form-data">
 	<label>Nombre</label>
 	<input type="text" name="nombre"><br>
 	<label>Logo</label>
 	<input type="text" name="logo"><br>
-	<input type="submit">Guardar
+
 
 	<input type="checkbox" name="categoria" value="CompraVenta">
 	Compra y Venta
 	<input type="checkbox" name="categoria" value="Invierte">Invierte
 	<input type="checkbox" name="categoria" value="Asociate">Asociate
+	<input type="file" name="imagenes" value='subir imagen'>
+		<input type="submit">Guardar
 </form>

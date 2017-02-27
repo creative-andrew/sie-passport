@@ -1,8 +1,16 @@
 <h1>Desde Index</h1>
 
-<% for(var i=0;i<emprendimientos.length;i++){ %>
+<% emprendimientos.forEach(function(emprendimiento){ %>
+<h2><%= emprendimiento.nombre %></h2>
+<img src="<%= emprendimiento.logo%>">
+<% });%>
+
+
+
+<!-- <% for(var i=0;i<emprendimientos[0].length;i++){ %>
 	<h1><%= emprendimientos[i].categoria %></h1>
 	<% for(var j=0;j<emprendimientos[i].empresas.length;j++){%>
 			<h2><%= emprendimientos[i].empresas[j].nombre %></h2>
+			<img src="<%= emprendimientos[i].empresas[j].logo%>">
 	<% } %>
-<% } %>
+<% } %> -->
