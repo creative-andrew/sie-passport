@@ -138,6 +138,19 @@ app.get('/categorias',function(req,res){
 
 });
 
+app.get('/about-us',function(req,res){
+
+    res.render('about-us');
+
+});
+
+app.get('/detalle',function(req,res){
+
+    res.render('detalle');
+
+});
+
+
 app.get('/index',function(req,res){
 
 	Emprendimiento.find({}, function (err, emprendimientos) {
