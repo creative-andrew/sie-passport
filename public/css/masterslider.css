@@ -90,6 +90,8 @@
 	-ms-transform: translateZ(0px);
 	-o-transform: translateZ(0px);
 	transform: translateZ(0px);
+	background: #fff;
+	border: solid 1px #f1f1f1;
 }
 
 .ms-wk .ms-slide {

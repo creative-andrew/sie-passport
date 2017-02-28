@@ -1,16 +1,54 @@
-<h1>Registro de emprendimiento</h1>
+<% layout('layout') %>
 
-<form method="POST" action="/" enctype="multipart/form-data">
-	<label>Nombre</label>
-	<input type="text" name="nombre"><br>
-	<label>Logo</label>
-	<input type="text" name="logo"><br>
+<div class="container e-registro-top">
+	<h1>Estas a un paso de <span>lograr</span> lo que soñaste</h1>
+</div>
+
+<div class="col-md-8 col-md-offset-2 form-reg">
+	<form method="POST" action="/" enctype="multipart/form-data">
 
 
-	<input type="checkbox" name="categoria" value="CompraVenta">
-	Compra y Venta
-	<input type="checkbox" name="categoria" value="Invierte">Invierte
-	<input type="checkbox" name="categoria" value="Asociate">Asociate
-	<input type="file" name="imagenes" value='subir imagen'>
-		<input type="submit">Guardar
-</form>
+		<div class="form-group">
+			<label class="label-master">Nombre de tu empresa</label>
+			<input class="form-control" type="text" name="nombre"><br>
+		</div>
+
+
+		<div class="form-group">
+			<label class="label-master">Slogan</label>
+			<input class="form-control" type="text" name="logo"><br>
+		</div>
+
+
+		<div class="control-group">
+			<label class="label-master" style="margin-bottom: 10px">Elige una Categoria</label>
+			<label class="control control--checkbox">Compra y Venta
+				<input type="checkbox" name="categoria" value="CompraVenta"/>
+				<div class="control__indicator"></div>
+			</label>
+
+			<label class="control control--checkbox">Invierte
+				<input type="checkbox" name="categoria" value="Invierte"/>
+				<div class="control__indicator"></div>
+			</label>
+
+			<label class="control control--checkbox">Asociate
+				<input type="checkbox" name="categoria" value="Asociate"/>
+				<div class="control__indicator"></div>
+			</label>
+
+		</div>
+
+		<label class="label-master" style="margin-top: 10px">Subir logo</label>
+
+		<input  id="input-id" class="file" data-preview-file-type="text" type="file" name="imagenes" value='subir imagen'>
+
+
+
+
+		<input type="submit" class="btn submit_sie" value="Registrarse">
+	</form>
+
+
+
+</div>
